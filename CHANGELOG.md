@@ -1,3 +1,11 @@
+# 0.2.8-rust-1.44.0
+
+* Compile only the single binary when `$BIN` env var is passed instead of the whole workspace.
+* Put unzipped `boostrap` and `boostrap.debug` files under `target/lambda/${PROFILE}/output/${BIN}`
+to allow for using this artifacts without an intermediate `.zip` file creation step.
+* Introduce `$SKIP_ZIPPING` env var. Setting `-e SKIP_ZIPPING=1` prevent `.zip` archive from
+being created.
+
 # 0.2.7-rust-1.44.0
 
 * Upgrade to Rust [`1.44.0`](https://blog.rust-lang.org/2020/06/04/Rust-1.44.0.html)
